@@ -547,16 +547,40 @@ body {
 
 .form-footer {
   width: 570px;
-  outline: 1px solid red;
   margin: 0;
 }
 .form-grup-footer {
   display: flex;
 }
+.text-grup-footer {
+  margin-bottom: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .input-footer {
   width: 358px;
-  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #2f303a;
+  color: #ffffff;
 }
+input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .btn-form-footer {
   display: flex;
   align-items: center;
@@ -701,8 +725,8 @@ body {
     visibility 250ms cubic-bezier(0.3, 0, 0.02, 1.13);
 }
 .modal {
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 448px;
+  min-height: 501px;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -746,7 +770,6 @@ body {
 /* ----------------form-------------------------------- */
 .form {
   width: 448px;
-  outline: 1px solid red;
   margin: 0;
 }
 .text-form {
@@ -765,11 +788,29 @@ body {
   width: 100%;
   gap: 4px;
   margin-bottom: 10px;
+  position: relative;
 }
+
+label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
 .form-input {
+  width: 100%;
+  padding: 11px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
+.ikon-form-input {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+/* .form-coment {
+} */
 .form-textarea {
   resize: none;
   width: 100%;
@@ -777,13 +818,12 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
-  margin-bottom: 20px;
 }
 
 .check {
   display: flex;
   gap: 9px;
-
+  padding-top: 20px;
   margin-bottom: 30px;
 
   font-style: normal;
@@ -814,7 +854,15 @@ body {
 
   color: var(--super-waite);
   background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   border-radius: 4px;
   border: transparent;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-form:hover,
+.btn-form:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
