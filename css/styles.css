@@ -760,6 +760,10 @@ input::placeholder {
   align-items: center;
   justify-content: center;
 }
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: #2196f3;
+}
 
 .backdrop.is-hidden {
   visibility: hidden;
@@ -791,11 +795,11 @@ input::placeholder {
   position: relative;
 }
 
-label {
+/* label {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-}
+} */
 
 .form-input {
   width: 100%;
@@ -803,14 +807,22 @@ label {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: transparent;
 }
+
+.form-input:focus {
+  border: 1px solid #2196f3;
+}
+.form-input:focus + .ikon-form-input {
+  fill: #2196f3;
+}
+
 .ikon-form-input {
   position: absolute;
   top: 50%;
   left: 15px;
 }
-/* .form-coment {
-} */
+
 .form-textarea {
   resize: none;
   width: 100%;
@@ -818,19 +830,69 @@ label {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
+  outline: transparent;
+}
+.form-textarea:focus {
+  border: 1px solid #2196f3;
+}
+
+.form-textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .check {
-  display: flex;
-  gap: 9px;
   padding-top: 20px;
   margin-bottom: 30px;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked + .check-text span {
+  border: transparent;
+  background: #2196f3;
+  fill: #ffffff;
+  border: 0.2px solid #ffffff;
+}
+
+.check-text span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  fill: transparent;
+}
+
+.check-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: #757575;
 }
 .check-link {
