@@ -493,9 +493,9 @@
             </li>
           </ul>
         </div>
-        <form class="form-footer">
+        <div>
           <p class="text-grup-footer">Підпишіться на розсилку</p>
-          <div class="form-grup-footer">
+          <form class="form-footer">
             <label>
               <input class="input-footer" type="email" name="email" placeholder="E-mail" />
             </label>
@@ -506,18 +506,18 @@
                 <use href="./images/icons.svg#icon-icon-send"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <!--------------------------- backdrop ----------------------------------->
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <p class="text-form">Залиште свої дані, ми вам передзвонимо</p>
         <form class="form">
-          <p class="text-form">Залиште свої дані, ми вам передзвонимо</p>
           <div class="form-grup">
-            <label for="name">Ім'я</label>
+            <label class="label-text" for="name">Ім'я</label>
             <input class="form-input" type="text" name="name" id="name" />
             <svg class="ikon-form-input" width="18" height="18">
               <use href="./images/icons.svg#icon-person-black"></use>
@@ -525,7 +525,7 @@
           </div>
 
           <div class="form-grup">
-            <label for="tel">Телефон</label>
+            <label class="label-text" for="tel">Телефон</label>
             <input class="form-input" type="tel" name="tel" id="tel" />
             <svg class="ikon-form-input" width="18" height="18">
               <use href="./images/icons.svg#icon-phone-black"></use>
@@ -533,15 +533,15 @@
           </div>
 
           <div class="form-grup">
-            <label for="mail">Пошта</label>
+            <label class="label-text" for="mail">Пошта</label>
             <input class="form-input" type="email" name="mail" id="mail" />
             <svg class="ikon-form-input" width="18" height="18">
               <use href="./images/icons.svg#icon-email-black"></use>
             </svg>
           </div>
 
-          <div class="form-grup">
-            <label for="coment">Коментар</label>
+          <div class="form-grup-textarea">
+            <label class="label-text" for="coment">Коментар</label>
             <textarea
               class="form-textarea"
               name="coment"
